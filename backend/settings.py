@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-if os.getenv('DATABASE_URL'):
+if os.getenv('DATABASE_URLS'):
     import dj_database_url
     DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
